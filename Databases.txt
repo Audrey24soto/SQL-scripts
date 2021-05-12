@@ -1,0 +1,31 @@
+CREATE TABLE orders (
+    -> order_id int NOT NULL AUTO_INCREMENT,
+    -> customer_id int NOT NULL,
+    -> place date,
+    -> total dec(7,2),
+    -> PRIMARY KEY (order_id),
+    -> FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+    -> );
+
+
+
+
+ SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| example            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| star               |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.04 sec)
+
+mysql> use star;
+Database changed
+mysql> SHOW  TABLES
+

@@ -1,0 +1,36 @@
+SHOW  TABLES;
++----------------+
+| Tables_in_star |
++----------------+
+| customer       |
+| orders         |
+| product        |
++----------------+
+
+
+DESCRIBE orders;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Order_ID    | int unsigned | NO   | PRI | NULL    | auto_increment |
+| Customer_id | varchar(30)  | NO   |     |         |                |
+| Product_id  | varchar(30)  | NO   |     | NULL    |                |
+| Place       | varchar(30)  | NO   |     | NULL    |                |
+| Quantity    | varchar(30)  | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> DROP TABLE orders
+
+ DESCRIBE orders;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| order_id    | int          | NO   | PRI | NULL    | auto_increment |
+| customer_id | int          | NO   | MUL | NULL    |                |
+| place       | date         | YES  |     | NULL    |                |
+| total       | decimal(7,2) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql>
